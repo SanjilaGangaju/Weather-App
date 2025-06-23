@@ -45,7 +45,7 @@ const fetchWeatherData = async ()=>{
     const res = await fetch(weatherURL);
     const data = await res.json();
     const {main, name, wind, sys, weather, dt}= data;
-    city.textContent=`${name}, ${getCountryCode(sys.country)}`;
+    city.innerHTML=`${name}, ${getCountryCode(sys.country)}`;
     dateTime.innerHTML= getDateTime(dt);
     
     weatherForecast.innerHTML= weather[0].main;
