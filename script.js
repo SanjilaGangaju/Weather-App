@@ -49,7 +49,10 @@ const fetchWeatherData = async ()=>{
     dateTime.innerHTML= getDateTime(dt);
     
     weatherForecast.innerHTML= weather[0].main;
-    weatherIcon.innerHTML=weather[0].icon;
+    
+    iconCode=weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    weatherIcon.innerHTML=`<img src="${iconUrl}" alt="Weather Icon">`;
 
     weatherTemp.innerHTML=`${main.temp}&#176`;
     minTemp.innerHTML= `${main.temp_min.toFixed()}&#176`;
