@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="main-container">
-        <div class="search box"><input type="search" placeholder="Search your city.."></div>
+    <section class="main-container">
+        <div class="search box"><form class="weather_search"><i class="fa-solid fa-magnifying-glass"></i><input type='text' class="city_name" placeholder='Search your city...'></div>
         <div class="main-content">
-            <p class="location">Kathmandu, Nepal</p>
+            <h1 class="location">Kathmandu, Nepal</h1>
             <p class="date-time">Sunday, February 23, 2024 at 10: 30 AM</p>
-            <div class="weather-type">Clouds</div>
-            <img alt="no-img">
-            <p class="temp">278</p>
+            <div class="weather-type"><p class="weather-forecast">Clouds</p><div class="weather-icon"></div></div>
+            
+            <p class="temperature">278&#176</p>
             <span id ="min-temp">Min: 277</span>
             <span id ="max-temp">Max: 279</span>
         </div>
         </div>
-        <div class="extra-info">
-            <div class="info-boxes">Feels like</div>
-            <div class="info-boxes">Humidity</div>
-            <div class="info-boxes">Wind</div>
-            <div class="info-boxes">Pressure</div>
+        <section class="extra-info">
+            <div class="info-card"><div class="feels-like-icon"></div><p class="feels-like">Feels like</p><p class="feels-like-data"></p>/div>
+            <div class="info-card"><div class="humidity-icon"></div><p class="humidity">Humidity</p><p class="humidity-data"></p>/div>
+            <div class="info-card"><div class="wind-icon"></div><p class="wind">Wind</p><p class="wind-data"></p>/div>
+            <div class="info-card"><div class="pressure-icon"></div><p class="pressure">Pressure</p><p class="pressure-data"></p>/div>
+            
                         
 
-        </div>
-    </div>
+        </section>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
