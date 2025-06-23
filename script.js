@@ -5,7 +5,7 @@ const weatherIcon = document.querySelector('.weather-icon');
 const weatherTemp = document.querySelector('.temperature');
 const minTemp = document.querySelector('#min-temp');
 const maxTemp = document.querySelector('#max-temp');
-const feelsLike = document.querySelector('.feels-like');
+const feelsLike = document.querySelector('.feels-like-data');
 const humidity = document.querySelector('.humidity-data');
 const windData = document.querySelector('.wind-data');
 const pressure = document.querySelector('.pressure-data');
@@ -40,7 +40,7 @@ const getDateTime =(dt) =>{
     return formatter.format(curDate);
 }
 const fetchWeatherData = async ()=>{
-    const weatherURL=`https://api.openweathermap.org/data/2.5/weather?q=${userSearch}&APPID=4010ba45befc1979fbcf1417fb6480c8`;
+    const weatherURL=`https://api.openweathermap.org/data/2.5/weather?q=${userSearch}&units=metric&APPID=4010ba45befc1979fbcf1417fb6480c8`;
     try{
     const res = await fetch(weatherURL);
     const data = await res.json();
@@ -54,11 +54,11 @@ const fetchWeatherData = async ()=>{
     const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
     weatherIcon.innerHTML=`<img src="${iconUrl}" alt="Weather Icon">`;
 
-    weatherTemp.innerHTML=`${main.temp}&#176`;
-    minTemp.innerHTML= `${main.temp_min.toFixed()}&#176`;
-    maxTemp.innerHTML= `${main.temp_max.toFixed()}&#176`;
+    weatherTemp.innerHTML=`${main.temp}&#176C`;
+    minTemp.innerHTML= `Min: ${main.temp_min.toFixed()}&#176C`;
+    maxTemp.innerHTML= `Max: ${main.temp_max.toFixed()}&#176C`;
 
-    feelsLike.innerHTML=`${main.feels_like.toFixed()}&#176`;
+    feelsLike.innerHTML=`${main.feels_like.toFixed()}&#176C`;
     humidity.innerHTML=`${main.humidity}%`;
     pressure.innerHTML= `${main.pressure} hPa`;
     windData.innerHTML= `${wind.speed} m/s`;
