@@ -13,10 +13,10 @@ A sleek and responsive weather forecast application with a video background and 
 ## Demo
 
 ## Technologies Used
-*HTML5
-*CSS3(Flexbox, Grid, Media Queries)
-*Vanilla JavaScript (ES6)
-*OpenWeatherMap API for real-time data
+* HTML5
+* CSS3(Flexbox, Grid, Media Queries)
+* Vanilla JavaScript (ES6)
+* OpenWeatherMap API for real-time data
 
 ## Dependencies And Resources
 -To fetch weather data, use the OpenWeatherMap API:
