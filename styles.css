@@ -18,7 +18,7 @@ video {
   left: 0;
   height: 100%;
   width: 100%;
-  
+  pointer-events: none;
   object-fit: cover;
   mix-blend-mode: overlay;
   transition: 3s ease-in-out;
