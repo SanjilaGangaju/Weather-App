@@ -43,7 +43,7 @@ video {
   font-size: 2.1rem;
 }
 .search-box {
-  margin-left: -40%;
+
   background-color: transparent;
   padding: 6px 10px;
   border-radius: 20px;
@@ -61,7 +61,7 @@ video {
 .city_name {
   border: none;
   background-color: transparent;
-  width: 200px;
+  width: 70%;
   color: white;
   outline: none;
 }
@@ -140,6 +140,7 @@ video {
   .main-container h1{
     font-size: 0.5rem;
   }
+ 
   body{
     padding: 0;
 
