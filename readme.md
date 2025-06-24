@@ -3,19 +3,20 @@
 A sleek and responsive weather forecast application with a video background and modern UI. Built using HTML, CSS, and JavaScript.
 
 ## Features
-- Search for current wether by city
-- Display of location, temperature, weather condition and additional information
-- Fullscreen dynamic video background based on weather condition and sunset and sunrise overlay
--Responsive layout
--Works across major browsers
+* Search for current weather by city  
+* Display of location, temperature, weather condition, and additional information  
+* Fullscreen dynamic video background based on weather condition  
+* Automatic dimming overlay using sunrise and sunset data (night mode)  
+* Responsive layout for all screen sizes  
+* Works across major browsers 
 
 ## Demo
 
 ## Technologies Used
--HTML5
--CSS3(Flexbox, Grid, Media Queries)
--Vanilla JavaScript (ES6)
--OpenWeatherMap API for real-time data
+*HTML5
+*CSS3(Flexbox, Grid, Media Queries)
+*Vanilla JavaScript (ES6)
+*OpenWeatherMap API for real-time data
 
 ## Dependencies And Resources
 -To fetch weather data, use the OpenWeatherMap API:
