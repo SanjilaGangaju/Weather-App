@@ -30,4 +30,4 @@ For free high-quality images, use Pexels. You can browse and download images her
 ## License
 This project is licensed under the MIT License.
 
-<p align="center"><strong>Made with ❤️ using OpenWeatherMap</strong></p>
+<p align="center"><strong>Made with ❤️ By Sanjila Gangaju</strong></p>
