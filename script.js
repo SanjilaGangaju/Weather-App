@@ -33,7 +33,7 @@ const getHours = (sunrise, sunset)=>{
    const sunsetDate = new Date(sunset*1000);
    const currDate = new Date();
 
-  if ((sunriseDate >= currDate) || (currDate>=sunsetDate)){
+  if ((sunriseDate >= currDate) || (currDate >= sunsetDate)){
     const nightOverlay = document.createElement('div');
     nightOverlay.classList.add('night-overlay');
     document.body.appendChild(nightOverlay);
