@@ -55,7 +55,7 @@ video {
 }
 .city_name::placeholder {
   color: white;
-  font: 1.1rem;
+  font: 0.9rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .city_name {
@@ -105,6 +105,7 @@ video {
   z-index: -2; /* Place on top of the video or background */
   pointer-events: none; /* Don't block interactions with the content */ 
   mix-blend-mode: darken;
+  display: none;
 
 }
 
@@ -123,7 +124,7 @@ video {
   background-color: transparent;
   border-radius: 10px;
   box-shadow: none;
-  border: 1px solid rgb(42, 42, 42);
+  border: 1px solid rgb(112, 109, 109);
   text-align: left;
   padding: 0 10px;
   color: rgb(236, 236, 236);

@@ -33,12 +33,16 @@ const getHours = (sunrise, sunset)=>{
    const sunsetDate = new Date(sunset*1000);
    const currDate = new Date();
 
-  if ((sunriseDate >= currDate) || (currDate >= sunsetDate)){
+  if ((currDate < sunriseDate) || (currDate >= sunsetDate)){
+    const nightOverlay = document.querySelector('.night-overlay');
+    if(!nightOverlay){
     const nightOverlay = document.createElement('div');
     nightOverlay.classList.add('night-overlay');
+    nightOverlay.style.display='block';
     document.body.appendChild(nightOverlay);
     document.body.style.color="rgba(214, 212, 212, 0.9)";
     infoCard.forEach((items)=>items.classList.add('info-card-night'));   
+    }
   };
 
 
@@ -105,4 +109,4 @@ const fetchWeatherData = async ()=>{
         console.log(error);
     }
 };
-window.addEventListener('load', fetchWeatherData());
+window.addEventListener('load', fetchWeatherData);
