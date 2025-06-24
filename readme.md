@@ -19,11 +19,11 @@ A sleek and responsive weather forecast application with a video background and 
 * OpenWeatherMap API for real-time data
 
 ## Dependencies And Resources
--To fetch weather data, use the OpenWeatherMap API:
+* To fetch weather data, use the OpenWeatherMap API:
 ```
    https://api.openweathermap.org/data/2.5/weather?q={CITY_NAME}&appid=YOUR_API_KEY&units=metric
 ```
--Pexels for Background Images
+* Pexels for Background Images
 For free high-quality images, use Pexels. You can browse and download images here:
  https://www.pexels.com
 
