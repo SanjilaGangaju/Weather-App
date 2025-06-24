@@ -14,7 +14,7 @@ const weatherSearch = document.querySelector(".weather_search");
 let userSearch="kathmandu";
 weatherSearch.addEventListener('submit', (e)=>{
     e.preventDefault();
-    console.log("clicked");
+    // console.log("clicked");
     let inputData = document.querySelector('.city_name');
 
     userSearch = inputData.value;
@@ -40,7 +40,7 @@ const getDateTime =(dt) =>{
     return formatter.format(curDate);
 }
 const fetchWeatherData = async ()=>{
-    const weatherURL=`httpss://api.openweathermap.org/data/2.5/weather?q=${userSearch}&units=metric&APPID=4010ba45befc1979fbcf1417fb6480c8`;
+    const weatherURL=`https://api.openweathermap.org/data/2.5/weather?q=${userSearch}&units=metric&APPID=4010ba45befc1979fbcf1417fb6480c8`;
     try{
     const res = await fetch(weatherURL);
     const data = await res.json();
