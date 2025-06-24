@@ -27,7 +27,7 @@ A sleek and responsive weather forecast application with a video background and 
 For free high-quality images, use Pexels. You can browse and download images here:
  https://www.pexels.com
 
-📄 License
+## License
 This project is licensed under the MIT License.
 
 Made with ❤️ by Sanjila Gangaju
