@@ -11,6 +11,9 @@ const windData = document.querySelector('.wind-data');
 const pressure = document.querySelector('.pressure-data');
 const backVideo = document.getElementsByTagName("video")[0];
 const weatherSearch = document.querySelector(".weather_search");
+const mainContainer = document.querySelector(".main-container");
+const infoCard = document.querySelectorAll(".info-card");
+console.log(infoCard);
 let userSearch="kathmandu";
 weatherSearch.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -24,6 +27,22 @@ weatherSearch.addEventListener('submit', (e)=>{
 })
 const getCountryCode= (code)=>{
     return new Intl.DisplayNames([code], { type: "region" }).of(code);
+}
+const getHours = (sunrise, sunset)=>{
+   const sunriseDate = new Date(sunrise*1000);
+   const sunsetDate = new Date(sunset*1000);
+   const currDate = new Date();
+
+  if ((sunriseDate >= currDate) || (currDate>=sunsetDate)){
+    const nightOverlay = document.createElement('div');
+    nightOverlay.classList.add('night-overlay');
+    document.body.appendChild(nightOverlay);
+    document.body.style.color="rgba(214, 212, 212, 0.9)";
+    infoCard.forEach((items)=>items.classList.add('info-card-night'));   
+  };
+
+
+
 }
 const getDateTime =(dt) =>{
     const curDate = new Date(dt*1000);
@@ -46,6 +65,7 @@ const fetchWeatherData = async ()=>{
     const data = await res.json();
     const {main, name, wind, sys, weather, dt}= data;
     city.innerHTML=`${name}, ${getCountryCode(sys.country)}`;
+    getHours(sys.sunrise, sys.sunset);
     dateTime.innerHTML= getDateTime(dt);
 
     const weatherCondition= weather[0].main;
@@ -72,11 +92,13 @@ const fetchWeatherData = async ()=>{
     weatherTemp.innerHTML=`${main.temp}&#176C`;
     minTemp.innerHTML= `Min: ${main.temp_min.toFixed()}&#176C`;
     maxTemp.innerHTML= `Max: ${main.temp_max.toFixed()}&#176C`;
+    
 
     feelsLike.innerHTML=`${main.feels_like.toFixed()}&#176C`;
     humidity.innerHTML=`${main.humidity}%`;
     pressure.innerHTML= `${main.pressure} hPa`;
     windData.innerHTML= `${wind.speed} m/s`;
+
     console.log(data);
     }
     catch(error){

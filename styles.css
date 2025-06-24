@@ -32,7 +32,7 @@ video {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  padding: 20px 0px;
+  padding: 20px 10px;
   text-align: center;
   gap: 15px;
   min-width: 40%;
@@ -66,7 +66,7 @@ video {
   outline: none;
 }
 .date-time {
-  margin-top: -8%;
+  margin-top: -20px;
   font-size: 0.99rem;
 }
 .weather-forecast {
@@ -95,6 +95,19 @@ video {
   width: 90%;
   gap: 15px;
 }
+.night-overlay{ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.68); /* Dark overlay */
+  z-index: -2; /* Place on top of the video or background */
+  pointer-events: none; /* Don't block interactions with the content */ 
+  mix-blend-mode: darken;
+
+}
+
 .info-card {
   background-color: rgba(94, 116, 127, 0.4);
   border-radius: 10px;
@@ -106,10 +119,26 @@ video {
   align-items: baseline;
   gap: 10px;
 }
-@media (max-width: 500px) {
+.info-card-night {
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: none;
+  border: 1px solid rgb(42, 42, 42);
+  text-align: left;
+  padding: 0 10px;
+  color: rgb(236, 236, 236);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+@media (max-width: 300px) {
   .main-container {
     padding: 15px;
-    width: 95%;
+    width: 100%;
+    
+  }
+  .main-container h1{
+    font-size: 0.5rem;
   }
   body{
     padding: 0;
