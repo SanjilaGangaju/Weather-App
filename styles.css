@@ -29,7 +29,7 @@ video{
      border-radius: 10px;
      padding: 30px 0px;
      text-align: center;
-     gap: 10px;
+     gap: 15px;
      min-width: 50%;
      margin: 2%;
    
@@ -80,9 +80,9 @@ video{
 }
 
 .weather-icon{
-    
+    margin-top: 3%;
     height: 10%;
-    margin-bottom: -15%;
+    margin-bottom: -9%;
 
 }
 .temperature{
